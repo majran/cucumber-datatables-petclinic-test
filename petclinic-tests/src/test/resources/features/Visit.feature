@@ -13,7 +13,7 @@ Feature: Visit - parameter type
 
   On Then part it looks for visit (in db) matching added ones using objects from in context
 
-  Scenario:
+  Scenario: Add visit
     Given Carlos Estaban pet owner
     And pet dog Lucky
     When add visit on 2023-02-14 for super injection

@@ -35,7 +35,7 @@ public class PetsSteps {
     public Pet pet(String type, String name) {
         log.info("Pet name: {}", name);
         log.info("Pet type: {}", type);
-        return petDao.findByOwnerNameType(name, PetType.valueOf(type.toUpperCase()));
+        return petDao.findByNameAndType(name, PetType.valueOf(type.toUpperCase()));
     }
 
     @And("pet {pet}")

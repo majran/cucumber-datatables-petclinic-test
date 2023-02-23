@@ -7,6 +7,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import io.qameta.allure.selenide.LogType;
 import lombok.extern.slf4j.Slf4j;
 import org.example.po.Helpers;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
 
 import java.util.logging.Level;
@@ -16,9 +17,12 @@ import java.util.logging.Level;
 @ContextConfiguration(classes = {TestConfig.class})
 public final class Hooks {
 
+    @Value("${env.base.url}")
+    private String baseUrl;
+
     @Before
-    public static void openApp() {
-        Helpers.openPage("http://localhost:8080");
+    public void openApp() {
+        Helpers.openPage(baseUrl);
         PropertiesReader.loadConfig();
     }
 

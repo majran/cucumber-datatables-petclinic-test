@@ -36,7 +36,7 @@ public class PetDao {
         }
     }
 
-    public Pet findByOwnerNameType(String name, PetType petType) {
+    public Pet findByNameAndType(String name, PetType petType) {
 
         try (Connection connection = ds.getOracleDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(

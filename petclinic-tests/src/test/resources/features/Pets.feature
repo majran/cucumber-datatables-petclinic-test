@@ -11,8 +11,8 @@ Feature: Pets - using @DataTableType
       | Zelda | dog    | 2023-03-03 | Jeff Black     |
       | Maria | lizard | 2023-02-02 | Maria Escobito |
     And single pet
-      | Name  | Emi        |
-      | Type  | Dog        |
-      | DoB   | 2010-01-01 |
-      | Owner | Marcin Maj |
+      | Name  | Emi             |
+      | Type  | Dog             |
+      | DoB   | 2010-01-01      |
+      | Owner | George Franklin |
 
